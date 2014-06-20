@@ -10,20 +10,27 @@ The new v2 API will be available in production before the end of July.
 New Formats
 -----------
 The new MBTA-realtime API supports JSON-P, to make it easier to write web apps that access the API directly. JSON and XML continue to be supported. 
+
 GTFS-realtime files will now include prediction, location and alert information for MBTA subway, commuter rail and bus service (Green Line predictions are not yet available). 
 
 New API Calls
 -------------
 The API supports five new calls.
+
 *predictionsbyroute,* *predictionsbytrip* and *predictionsbystop* give you both predictions for all service on a route, or a particular trip, or at a stop, and vehicle locations for the vehicles being predicted.
+
 *vehiclesbyroute* and *vehiclesbystop* give vehicle locations only for all service on a route or for a specific trip. 
+
 The data returned is organized the same way for both calls, and is much like the existing “schedule” calls: by mode, then route, then direction, then trip, then stop. IDs and text descriptions are given in each case. 
+
 The prediction data includes scheduled arrival and departure time, predicted actual time, and predicted number of seconds away from right now. The vehicle location data includes latitude, longitude, bearing (if known), speed (if known), and a timestamp. 
+
 Finally, if there are alerts that affect the service, the ID’s and headers of those alerts are included in the prediction call. 
 
 New Parameters for Existing Calls
 ---------------------------------
 Use the *format* parameter to specify XML, JSON, or JSON-P. 
+
 Use *include_access* and *include_service* to specify whether you want alerts relating to accessibility (like elevator / escalator outages), alerts related to service (like delays), or both. 
 
 New Fields in Existing Calls
@@ -207,7 +214,7 @@ The following is a list of new fields in the alerts calls:
             </td>
             <td width="149" valign="top">
                 <p>
-                    In some circumstances route shouldn't be listed*
+                    In some circumstances route shouldn't be listed (see below)
                 </p>
             </td>
             <td width="355" valign="top">
@@ -222,12 +229,14 @@ The following is a list of new fields in the alerts calls:
 </table>
 <p>
 
- * _Route_hide example: Route_hide is generally for what the MBTA calls “hybrid” routes, like route 62/76, which is a combination of route 62 and route 76 that runs on Saturdays. Route 62 and route 76 and route 62/76 are three separate routes in GTFS, but to a rider a route 62/76 trip is a trip on both route 62 and route 76. So if a detour affects route 62 and route 62/76 it isn’t necessary to specify to the user that it’s affecting route 62/76, that’s implicit as long as you specify that it’s affecting route 62._
+_Example of Route_hide: Route_hide is generally for what the MBTA calls “hybrid” routes, like route 62/76, which is a combination of route 62 and route 76 that runs on Saturdays. Route 62 and route 76 and route 62/76 are three separate routes in GTFS, but to a rider a route 62/76 trip is a trip on both route 62 and route 76. So if a detour affects route 62 and route 62/76 it isn’t necessary to specify to the user that it’s affecting route 62/76, that’s implicit as long as you specify that it’s affecting route 62._
  
 Other Changes
 -------------
 XML header changed to include data that is technically optional but which some parsers expect. 
+
 No more empty strings – if a field isn’t applicable it’s not included. 
+
 You can use a parent_stop for a stop parameter. In GTFS a station’s inbound platform, outbound platform, busway, etc. might be represented by different stop ID’s that all share the same “parent stop.” That means you can request predictions for South Station parent stop ID “place-sstat” and get predictions for all subway, bus, and commuter rail departures from South Station with one call. 
 
 Sample Output
@@ -261,6 +270,7 @@ Sample Output
 ```
 
 *alerts* (one alert, effect_periods and services have been abridged; alert is fictional)
+```xml
 <alert alert_id="123456">  
 <effect_name>Shuttle</effect_name>  
 <effect>DETOUR</effect>  
@@ -290,3 +300,4 @@ Sample Output
 <elevators/>  
 </affected_services>  
 </alert>
+```
