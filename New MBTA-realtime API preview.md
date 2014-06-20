@@ -2,7 +2,9 @@ Introducing: The new MBTA-realtime API
 ======================================
 
 The new MBTA-realtime v2 API integrates predictions and alerts together for MBTA subway, commuter rail, and bus. The API supports new formats, calls and fields to make it easier than ever to develop a wide variety of applications using MBTA data.
+
 A preview of the new MBTA-realtime API using test data launches June 24, and more comprehensive documentation will be available at that time. This document summarizes the differences between the new v2 API and the existing v1 API, documented at [http://realtime.mbta.com/Portal/Home/Documents](the realtime.mbta.com documentation page). We will also be collecting feedback, and may make adjustments to the API based on the feedback we collect. 
+
 The new v2 API will be available in production before the end of July. 
 
 New Formats
