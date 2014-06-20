@@ -11,6 +11,7 @@ The new MBTA-realtime API supports JSON-P, to make it easier to write web apps t
 GTFS-realtime files will now include prediction, location and alert information for MBTA subway, commuter rail and bus service (Green Line predictions are not yet available). 
 
 New API Calls
+-------------
 The API supports five new calls.
 *predictionsbyroute,* *predictionsbytrip* and *predictionsbystop* give you both predictions for all service on a route, or a particular trip, or at a stop, and vehicle locations for the vehicles being predicted.
 *vehiclesbyroute* and *vehiclesbystop* give vehicle locations only for all service on a route or for a specific trip. 
