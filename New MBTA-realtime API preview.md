@@ -49,7 +49,7 @@ The following is a list of new fields in the alerts calls:
                     Description
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <p>
                     Sample Values
                 </p>
@@ -66,7 +66,7 @@ The following is a list of new fields in the alerts calls:
                     Very short text summary of alert
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <ul>
                     <li>
                         Red Line shuttle
@@ -94,7 +94,7 @@ The following is a list of new fields in the alerts calls:
                     Like header_text but shortened to 140 characters
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <p>
                     · Buses replacing Green Line C service btn Coolidge Cnr &amp; Cleveland Cir fm Sat Jun 21 through Sun Jun 22. Connect to D branch at
                     Cleveland Cir
@@ -112,7 +112,7 @@ The following is a list of new fields in the alerts calls:
                     Text description of when an upcoming alert is effective
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <ul>
                     <li>
                         Monday
@@ -140,7 +140,7 @@ The following is a list of new fields in the alerts calls:
                     Text description of how a repeating alert repeats
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <ul>
                     <li>
                         daily
@@ -168,7 +168,7 @@ The following is a list of new fields in the alerts calls:
                     Indicates that an alert should be front and center to all users, with the text to use.
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <p>
                     · Shuttle buses replacing Red Line service between Harvard Station and Andrew Station. Seek alternate routes if possible.
                 </p>
@@ -185,7 +185,7 @@ The following is a list of new fields in the alerts calls:
                     Flag indicating whether an alert is currently in effect and whether it's new.
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <ul>
                     <li>
                         <strong>New</strong>
@@ -217,7 +217,7 @@ The following is a list of new fields in the alerts calls:
                     In some circumstances route shouldn't be listed (see below)
                 </p>
             </td>
-            <td width="355" valign="top">
+            <td width="400" valign="top">
                 <ul>
                     <li>
                         true
