@@ -289,13 +289,13 @@ Sample Output
 <effect_periods>  
 <effect_period effect_start="1403425800" effect_end="1403505000"/>  
 <effect_period effect_start="1403944200" effect_end="1404023400"/>  
-
+<!--- This example is abridged for readability --->
 </effect_periods>  
 <affected_services>  
 <services>  
 <service route_type="1" mode_name="Subway" route_id="903_" route_name="Orange Line" stop_id="70026" stop_name="North Station - Inbound"/>  
 <service route_type="1" mode_name="Subway" route_id="903_" route_name="Orange Line" stop_id="70027" stop_name="North Station - Outbound"/>  
-  
+<!--- This example is abridged for readability --->
 </services>  
 <elevators/>  
 </affected_services>  
