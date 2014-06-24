@@ -3,11 +3,11 @@ Introducing: The new MBTA-realtime API
 
 The new MBTA-realtime v2 API integrates predictions and alerts together for MBTA subway, commuter rail, and bus. The API supports new formats, calls and fields to make it easier than ever to develop a wide variety of applications using MBTA data.
 
-A preview of the new MBTA-realtime API using test data launched June 24, and comprehensize documentation is available. This document summarizes the differences between the new v2 API and the existing v1 API. We will also be collecting feedback, and may make adjustments to the API based on the feedback we collect. The new v2 API will be available in production before the end of July. 
+A preview of the new MBTA-realtime API *using test data* launched June 24, and comprehensive documentation is available. This document summarizes the differences between the new v2 API and the existing v1 API. We will also be collecting feedback, and may make adjustments to the API based on the feedback we collect. The new v2 API will be available in production before the end of July. 
 
 Accessing the API During the Contest
 ------------------------------------
-We've made a special instance of the API available for the contest. 
+We've made a special instance of the API available for the contest. Remember that this API is publishing *test data.* 
 IP address: 54.81.189.97
 API key: wX9NwuHnZU2ToO7GmGR9uw
 Sample: [http://54.81.189.97/developer/api/v2/servertime?api_key=wX9NwuHnZU2ToO7GmGR9uw&format=json]
@@ -40,9 +40,9 @@ Use the *format* parameter to specify XML, JSON, or JSON-P.
 
 Use *include_access* and *include_service* to specify whether you want alerts relating to accessibility (like elevator / escalator outages), alerts related to service (like delays), or both. 
 
-Sample Calls
+Sample Calls 
 ------------
-All the parameters and fields are spelled out in the documentation, but if you just want to try some calls and see what response you get, you can try the ones below. 
+All the parameters and fields are spelled out in the documentation, but if you just want to try some calls and see what response you get, you can try the ones below. Remember that this is test data. Do not publish this to users. 
 
 [http://54.81.189.97/developer/api/v2/servertime?api_key=wX9NwuHnZU2ToO7GmGR9uw&format=json]
 [http://54.81.189.97/developer/api/v2/routes?api_key=wX9NwuHnZU2ToO7GmGR9uw&format=json]
@@ -66,6 +66,10 @@ All the parameters and fields are spelled out in the documentation, but if you j
 [http://54.81.189.97/developer/api/v2/vehiclesbyroute?api_key=wX9NwuHnZU2ToO7GmGR9uw&route=CR-Providence&format=json]
 [http://54.81.189.97/developer/api/v2/vehiclesbytrip?api_key=wX9NwuHnZU2ToO7GmGR9uw&trip=CR-Providence-CR-Weekday-Providence-Dec13-818&format=json]
 
+And here is GTFS-realtime: 
+[http://developer.mbta.com/lib/GTRTFS/Alerts/Alerts.pb]
+[http://developer.mbta.com/lib/GTRTFS/Alerts/TripUpdates.pb]
+[http://developer.mbta.com/lib/GTRTFS/Alerts/VehiclePositions.pb]
 
 New Fields in Existing Alert Calls
 ----------------------------
