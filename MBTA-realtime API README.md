@@ -28,11 +28,11 @@ The API supports five new calls.
 
 *vehiclesbyroute* and *vehiclesbystop* give vehicle locations only for all service on a route or for a specific trip. 
 
-The data returned is organized the same way for both calls, and is much like the existing “schedule” calls: by mode, then route, then direction, then trip, then stop. IDs and text descriptions are given in each case. 
+The data returned is organized the same way for both calls, and is much like the existing ï¿½scheduleï¿½ calls: by mode, then route, then direction, then trip, then stop. IDs and text descriptions are given in each case. 
 
 The prediction data includes scheduled arrival and departure time, predicted actual time, and predicted number of seconds away from right now. The vehicle location data includes latitude, longitude, bearing (if known), speed (if known), and a timestamp. 
 
-Finally, if there are alerts that affect the service, the ID’s and headers of those alerts are included in the prediction call. 
+Finally, if there are alerts that affect the service, the IDï¿½s and headers of those alerts are included in the prediction call. 
 
 New Parameters for Existing Calls
 ---------------------------------
@@ -134,7 +134,7 @@ The following is a list of new fields in the alerts calls:
             </td>
             <td width="400" valign="top">
                 <p>
-                    · Buses replacing Green Line C service btn Coolidge Cnr &amp; Cleveland Cir fm Sat Jun 21 through Sun Jun 22. Connect to D branch at
+                    ï¿½ Buses replacing Green Line C service btn Coolidge Cnr &amp; Cleveland Cir fm Sat Jun 21 through Sun Jun 22. Connect to D branch at
                     Cleveland Cir
                 </p>
             </td>
@@ -208,7 +208,7 @@ The following is a list of new fields in the alerts calls:
             </td>
             <td width="400" valign="top">
                 <p>
-                    · Shuttle buses replacing Red Line service between Harvard Station and Andrew Station. Seek alternate routes if possible.
+                    ï¿½ Shuttle buses replacing Red Line service between Harvard Station and Andrew Station. Seek alternate routes if possible.
                 </p>
             </td>
         </tr>
@@ -267,15 +267,15 @@ The following is a list of new fields in the alerts calls:
 </table>
 <p>
 
-_Example of Route_hide: Route_hide is generally for what the MBTA calls “hybrid” routes, like route 62/76, which is a combination of route 62 and route 76 that runs on Saturdays. Route 62 and route 76 and route 62/76 are three separate routes in GTFS, but to a rider a route 62/76 trip is a trip on both route 62 and route 76. So if a detour affects route 62 and route 62/76 it isn’t necessary to specify to the user that it’s affecting route 62/76, that’s implicit as long as you specify that it’s affecting route 62._
+_Example of Route_hide: Route_hide is generally for what the MBTA calls ï¿½hybridï¿½ routes, like route 62/76, which is a combination of route 62 and route 76 that runs on Saturdays. Route 62 and route 76 and route 62/76 are three separate routes in GTFS, but to a rider a route 62/76 trip is a trip on both route 62 and route 76. So if a detour affects route 62 and route 62/76 it isnï¿½t necessary to specify to the user that itï¿½s affecting route 62/76, thatï¿½s implicit as long as you specify that itï¿½s affecting route 62._
  
 Other Changes
 -------------
 XML header changed to include data that is technically optional but which some parsers expect. 
 
-No more empty strings – if a field isn’t applicable it’s not included. 
+No more empty strings ï¿½ if a field isnï¿½t applicable itï¿½s not included. 
 
-You can use a parent_stop for a stop parameter. In GTFS a station’s inbound platform, outbound platform, busway, etc. might be represented by different stop ID’s that all share the same “parent stop.” That means you can request predictions for South Station parent stop ID “place-sstat” and get predictions for all subway, bus, and commuter rail departures from South Station with one call. 
+*(Coming soon)* You can use a parent_stop for a stop parameter. In GTFS a stationï¿½s inbound platform, outbound platform, busway, etc. might be represented by different stop IDï¿½s that all share the same ï¿½parent stop.ï¿½ That means you can request predictions for South Station parent stop ID ï¿½place-sstatï¿½ and get predictions for all subway, bus, and commuter rail departures from South Station with one call. 
 
 Sample Calls
 ------------
