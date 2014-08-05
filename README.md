@@ -5,7 +5,7 @@ The new MBTA-realtime v2 API integrates predictions and alerts together for MBTA
 
 As of August 5th 2014 The new API is now in production. New documentation and access instructions are available at [http://realtime.mbta.com].
 
-The data challenge started before development was complete, so we set up special instance running test data. That is still available, and instructions for accessing it are in the "original MBTA-realtime docs" directory. However now that the API is in production there isn’t a real advantage in using the preview server. 
+The data challenge started before development was complete, so we set up special instance running test data. That is still available, and instructions for accessing it are in the "original MBTA-realtime docs" directory. However now that the API is in production there isn√ït a real advantage in using the preview server. 
 
 New Formats
 -----------
@@ -21,11 +21,11 @@ The API supports five new calls.
 
 *vehiclesbyroute* and *vehiclesbystop* give vehicle locations only for all service on a route or for a specific trip. 
 
-The data returned is organized the same way for both calls, and is much like the existing ìscheduleî calls: by mode, then route, then direction, then trip, then stop. IDs and text descriptions are given in each case. 
+The data returned is organized the same way for both calls, and is much like the existing ‚Äúschedule‚Äù calls: by mode, then route, then direction, then trip, then stop. IDs and text descriptions are given in each case. 
 
 The prediction data includes scheduled arrival and departure time, predicted actual time, and predicted number of seconds away from right now. The vehicle location data includes latitude, longitude, bearing (if known), speed (if known), and a timestamp. 
 
-Finally, if there are alerts that affect the service, the IDís and headers of those alerts are included in the prediction call. 
+Finally, if there are alerts that affect the service, the ID‚Äôs and headers of those alerts are included in the prediction call. 
 
 New Parameters for Existing Calls
 ---------------------------------
@@ -100,7 +100,7 @@ The following is a list of new fields in the alerts calls:
             </td>
             <td width="400" valign="top">
                 <p>
-                    ∑ Buses replacing Green Line C service btn Coolidge Cnr &amp; Cleveland Cir fm Sat Jun 21 through Sun Jun 22. Connect to D branch at
+                    ¬∑ Buses replacing Green Line C service btn Coolidge Cnr &amp; Cleveland Cir fm Sat Jun 21 through Sun Jun 22. Connect to D branch at
                     Cleveland Cir
                 </p>
             </td>
@@ -174,7 +174,7 @@ The following is a list of new fields in the alerts calls:
             </td>
             <td width="400" valign="top">
                 <p>
-                    ∑ Shuttle buses replacing Red Line service between Harvard Station and Andrew Station. Seek alternate routes if possible.
+                    ¬∑ Shuttle buses replacing Red Line service between Harvard Station and Andrew Station. Seek alternate routes if possible.
                 </p>
             </td>
         </tr>
@@ -233,15 +233,15 @@ The following is a list of new fields in the alerts calls:
 </table>
 <p>
 
-_Example of Route_hide: Route_hide is generally for what the MBTA calls ìhybridî routes, like route 62/76, which is a combination of route 62 and route 76 that runs on Saturdays. Route 62 and route 76 and route 62/76 are three separate routes in GTFS, but to a rider a route 62/76 trip is a trip on both route 62 and route 76. So if a detour affects route 62 and route 62/76 it isnít necessary to specify to the user that itís affecting route 62/76, thatís implicit as long as you specify that itís affecting route 62._
+_Example of Route_hide: Route_hide is generally for what the MBTA calls ‚Äúhybrid‚Äù routes, like route 62/76, which is a combination of route 62 and route 76 that runs on Saturdays. Route 62 and route 76 and route 62/76 are three separate routes in GTFS, but to a rider a route 62/76 trip is a trip on both route 62 and route 76. So if a detour affects route 62 and route 62/76 it isn‚Äôt necessary to specify to the user that it‚Äôs affecting route 62/76, that‚Äôs implicit as long as you specify that it‚Äôs affecting route 62._
  
 Other Changes
 -------------
 XML header changed to include data that is technically optional but which some parsers expect. 
 
-No more empty strings ñ if a field isnít applicable itís not included. 
+No more empty strings ‚Äì if a field isn‚Äôt applicable it‚Äôs not included. 
 
-You can use a parent_stop for a stop parameter. You can request predictions for South Station parent stop ID ìplace-sstatî and get predictions for all subway, bus, and commuter rail departures from South Station with one call. 
+You can use a parent_stop for a stop parameter. You can request predictions for South Station parent stop ID ‚Äúplace-sstat‚Äù and get predictions for all subway, bus, and commuter rail departures from South Station with one call. 
 
 Go to [http://realtime.mbta.com] to learn more. 
 --------------
