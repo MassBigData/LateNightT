@@ -5,10 +5,7 @@ The new MBTA-realtime v2 API integrates predictions and alerts together for MBTA
 
 As of August 5th 2014 The new API is now in production. New documentation and access instructions are available at [http://realtime.mbta.com].
 
-The data challenge started before development was complete, so we set up special instance running test data. That is still available, and instructions for accessing it are in the “original MBTA-realtime docs” directory. However now that the API is in production there isn’t a real advantage in using the preview server. 
-
-Accessing the API During the Contest
-------------------------------------
+The data challenge started before development was complete, so we set up special instance running test data. That is still available, and instructions for accessing it are in the "original MBTA-realtime docs" directory. However now that the API is in production there isn’t a real advantage in using the preview server. 
 
 New Formats
 -----------

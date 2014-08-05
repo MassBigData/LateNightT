@@ -1,6 +1,6 @@
 Important Note to Reader
 -----------------------
-This folder contains the original draft documentation, published for the data challenge along with a preview of the new API. The new API v2 is now in production, and improved documentation is available. It is recommended that you visit [http://realtime.mbta.com] and access the new documentation there. 
+This folder contains the original draft documentation, published for the data challenge along with a preview of the new API. The new API v2 is now in production, and improved documentation is available. It is recommended that you visit [http://realtime.mbta.com] and access the new documentation there. The “preview” copy of the API is still running, and the instructions below will still work. 
 
 Introducing: The new MBTA-realtime API
 ======================================
